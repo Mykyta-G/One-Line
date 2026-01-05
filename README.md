@@ -5,7 +5,10 @@
 [![npm version](https://img.shields.io/npm/v/one-line-cli.svg)](https://www.npmjs.com/package/one-line-cli)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Have you ever got tired of typing in the same commands in the same way for to long time such as `npm build -> npm run dev`, `dotnet build -> dotnet run`, `python3 script.py -> pytest`, etc.?
+Have you ever got tired of typing in the same commands in the same way for to long time such as 
+`npm build -> npm run dev`,
+`dotnet build -> dotnet run`,
+`python3 script.py -> pytest`, etc.?
 
 One Line Solves That!
 
