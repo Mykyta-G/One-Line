@@ -1,5 +1,7 @@
 # One-Line
 
+<img width="716" height="280" alt="preview" src="https://github.com/user-attachments/assets/6b71af08-c1c0-45ff-9dd5-e297b08bd969" />
+
 **Command Line Tool To Combine Commands Into One**
 
 [![npm version](https://img.shields.io/npm/v/one-line-cli.svg)](https://www.npmjs.com/package/one-line-cli)
@@ -313,4 +315,3 @@ Created and maintained by Mykyta Grogul
 ## Acknowledgments
 
 This project was built with a focus on developer productivity and workflow optimization. Special thanks to the open-source community for the excellent tools and libraries that made this possible.
-
