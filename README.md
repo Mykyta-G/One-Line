@@ -1,11 +1,11 @@
 # One-Line
 
+[![npm version](https://img.shields.io/npm/v/one-line-cli.svg)](https://www.npmjs.com/package/one-line-cli)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 <img width="716" height="280" alt="preview" src="https://github.com/user-attachments/assets/6b71af08-c1c0-45ff-9dd5-e297b08bd969" />
 
 **Command Line Tool To Combine Commands Into One**
-
-[![npm version](https://img.shields.io/npm/v/one-line-cli.svg)](https://www.npmjs.com/package/one-line-cli)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Have you ever got tired of typing in the same commands in the same way for to long time such as 
 `npm build -> npm run dev`,
