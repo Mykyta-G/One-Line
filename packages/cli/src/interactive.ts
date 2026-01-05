@@ -13,6 +13,8 @@ export class InteractiveMenu {
     while (true) {
       console.clear();
       console.log(chalk.bold.cyan('\nOne-Line - Command Manager\n'));
+      console.log(chalk.gray('Combine multiple commands into one. Run them with: ') + chalk.cyan('one-line <alias>'));
+      console.log(chalk.gray('Or use this menu to manage your commands.\n'));
 
       const commands = this.manager.getAllCommands();
 
@@ -33,7 +35,7 @@ export class InteractiveMenu {
         {
           type: 'list',
           name: 'action',
-          message: '\nWhat would you like to do?\n',
+          message: 'What would you like to do?',
           choices: [
             { name: 'Run a command', value: 'run' },
             { name: 'Add new command', value: 'add' },
@@ -167,6 +169,11 @@ export class InteractiveMenu {
     try {
       const command = this.manager.addCommand(name, steps);
       console.log(chalk.bold.green(`\n[SUCCESS] Command "${command.name}" created successfully!\n`));
+      console.log(chalk.bold('Run it with:'));
+      console.log(chalk.cyan(`  one-line ${command.alias}`));
+      console.log(chalk.gray('  or'));
+      console.log(chalk.cyan(`  one-line run "${command.name}"`));
+      console.log();
     } catch (error: any) {
       console.log(chalk.bold.red(`\n[ERROR] ${error.message}\n`));
     }
