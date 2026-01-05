@@ -1,12 +1,15 @@
 # One-Line
 
-**A powerful command aliasing and workflow automation tool for developers**
+**Command Line Tool To Combine Commands Into One**
 
 [![npm version](https://img.shields.io/npm/v/one-line-cli.svg)](https://www.npmjs.com/package/one-line-cli)
-[![npm downloads](https://img.shields.io/npm/dm/one-line-cli.svg)](https://www.npmjs.com/package/one-line-cli)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-One-Line is a production-ready CLI tool and VS Code extension that enables developers to create, manage, and execute command sequences through an terminal based menu. Built with TypeScript and designed for cross-platform compatibility, it provides a quick and easy solution for repetitive development workflows.
+Have you ever got tired of typing in the same commands in the same way for to long time such as npm build -> npm run dev -> ... repeat
+
+One Line Solves That!
+
+One-Line is a production-ready CLI tool that enables developers to create, manage, and execute command sequences through an terminal based menu. Built with TypeScript, it provides a quick and easy solution for repetitive development workflows.
 
 **🚀 Now available on npm!** Install with: `npm install -g one-line-cli`
 
@@ -24,8 +27,6 @@ Then run `one-line` to get started!
 - **Sequential Execution**: Commands run one after another, stopping on failure (like `&&`)
 - **Interactive Management**: Easy-to-use menus for viewing, running, and managing commands
 - **Cross-Platform**: Works on macOS, Linux, and Windows
-- **VS Code Integration**: Full integration with VS Code's command palette and sidebar
-- **Shared Storage**: CLI and VS Code extension use the same command storage
 
 ## Installation
 
