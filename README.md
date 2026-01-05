@@ -29,6 +29,7 @@ Then run `one-line` to get started!
 ## Features
 
 - **Works with ANY Command**: npm, dotnet, python, go, cargo, make, docker, kubectl - anything!
+- **Tab Completion** is automatically installed when you install the package!
 - **Save Command Sequences**: Combine multiple commands into one named shortcut
 - **Tab Completion**: Press Tab to see and autocomplete your saved commands (bash/zsh)
 - **Sequential Execution**: Commands run one after another, stopping on failure (like `&&`)
@@ -44,10 +45,6 @@ Then run `one-line` to get started!
 ```bash
 npm install -g one-line-cli
 ```
-
-That's it! Now you can use `one-line` from anywhere in your terminal.
-
-**Tab Completion** is automatically installed when you install the package! It detects your shell (zsh on macOS, bash on Linux) and sets it up automatically.
 
 If you need to manually install or reinstall completion:
 ```bash
