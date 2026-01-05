@@ -1,0 +1,33 @@
+{
+  "name": "one-line-cli",
+  "version": "1.0.0",
+  "description": "CLI tool to combine multiple terminal commands into single named shortcuts",
+  "main": "dist/index.js",
+  "bin": {
+    "one-line": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "echo \"Tests not yet implemented\""
+  },
+  "keywords": [
+    "cli",
+    "command",
+    "alias",
+    "productivity",
+    "terminal"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@one-line/core": "^1.0.0",
+    "chalk": "^4.1.2",
+    "commander": "^11.1.0",
+    "inquirer": "^8.2.6"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^8.2.10"
+  }
+}
+

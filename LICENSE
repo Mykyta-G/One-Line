@@ -1,4 +1,4 @@
-MIT License
+MIT License with Attribution Requirement
 
 Copyright (c) 2026 Mykyta Grogul
 
@@ -9,8 +9,19 @@ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 copies of the Software, and to permit persons to whom the Software is
 furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+1. The above copyright notice and this permission notice shall be included in all
+   copies or substantial portions of the Software.
+
+2. Any derivative works, modifications, or redistributions of this Software must
+   include clear and prominent attribution to the original author (Mykyta Grogul)
+   in the documentation, user interface, and/or other materials provided with the
+   distribution. The attribution must include:
+   - The original author's name: Mykyta Grogul
+   - A link to the original project repository (if publicly available)
+   - A statement indicating that the work is derived from or based on this Software
+
+3. Derivative works may not use the same name ("One-Line") without explicit 
+   written permission from the original author.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,

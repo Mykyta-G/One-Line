@@ -1,0 +1,31 @@
+{
+  "name": "one-line-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Combine multiple terminal commands into single named shortcuts",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "bash scripts/build.sh",
+    "build:workspaces": "npm run build --workspaces",
+    "clean": "rm -rf packages/*/dist packages/*/node_modules node_modules",
+    "package:cli": "bash scripts/package-cli.sh",
+    "package:vscode": "bash scripts/package-vscode.sh",
+    "test": "npm run test --workspaces"
+  },
+  "keywords": [
+    "cli",
+    "command",
+    "alias",
+    "vscode",
+    "productivity"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.3"
+  }
+}
+

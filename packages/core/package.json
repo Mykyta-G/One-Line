@@ -1,0 +1,25 @@
+{
+  "name": "@one-line/core",
+  "version": "1.0.0",
+  "description": "Core library for One-Line command management",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Tests not yet implemented\""
+  },
+  "keywords": [
+    "command",
+    "cli",
+    "automation"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/uuid": "^9.0.7"
+  }
+}
+
