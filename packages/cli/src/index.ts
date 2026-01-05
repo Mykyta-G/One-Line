@@ -2,7 +2,7 @@
 
 import { Command } from 'commander';
 import { InteractiveMenu } from './interactive';
-import { listCommands, addCommand, runCommand, deleteCommand, editCommand } from './commands';
+import { listCommands, addCommand, runCommand, deleteCommand, editCommand, generateCompletion, installCompletion } from './commands';
 import { CommandManager } from './core';
 
 const program = new Command();
@@ -74,6 +74,23 @@ program
   .description('Edit a saved command by name or ID')
   .action(async (name: string) => {
     await editCommand(name);
+  });
+
+// Generate shell completion script
+program
+  .command('completion <shell>')
+  .description('Generate shell completion script (bash or zsh)')
+  .action(async (shell: string) => {
+    await generateCompletion(shell);
+  });
+
+// Auto-install completion
+program
+  .command('install-completion')
+  .alias('setup')
+  .description('Automatically detect shell and install tab completion')
+  .action(async () => {
+    await installCompletion();
   });
 
 program.parse(process.argv);

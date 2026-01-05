@@ -103,12 +103,22 @@ export class CommandStorage {
       name,
       alias: commandAlias,
       steps,
-      createdAt: new Date().toISOString()
+      createdAt: new Date().toISOString(),
+      usageCount: 0
     };
 
     data.commands.push(command);
     this.saveData(data);
     return command;
+  }
+
+  public incrementUsageCount(id: string): void {
+    const data = this.loadData();
+    const index = data.commands.findIndex(cmd => cmd.id === id);
+    if (index !== -1) {
+      data.commands[index].usageCount = (data.commands[index].usageCount || 0) + 1;
+      this.saveData(data);
+    }
   }
 
   public updateCommand(id: string, updates: Partial<Omit<Command, 'id' | 'createdAt'>>): Command {

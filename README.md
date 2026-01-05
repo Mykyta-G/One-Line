@@ -5,11 +5,11 @@
 [![npm version](https://img.shields.io/npm/v/one-line-cli.svg)](https://www.npmjs.com/package/one-line-cli)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Have you ever got tired of typing in the same commands in the same way for to long time such as npm build -> npm run dev -> ... repeat
+Have you ever got tired of typing in the same commands in the same way for to long time such as `npm build -> npm run dev`, `dotnet build -> dotnet run`, `python3 script.py -> pytest`, etc.?
 
 One Line Solves That!
 
-One-Line is a production-ready CLI tool that enables developers to create, manage, and execute command sequences through an terminal based menu. Built with TypeScript, it provides a quick and easy solution for repetitive development workflows.
+One-Line is a production-ready CLI tool that enables developers to create, manage, and execute **any command sequences** through a terminal-based menu. Built with TypeScript, it works with **any command** - npm, dotnet, python, go, cargo, make, or anything else you use. Just save your command sequences and run them with a single shortcut!
 
 **🚀 Now available on npm!** Install with: `npm install -g one-line-cli`
 
@@ -23,7 +23,9 @@ Then run `one-line` to get started!
 
 ## Features
 
+- **Works with ANY Command**: npm, dotnet, python, go, cargo, make, docker, kubectl - anything!
 - **Save Command Sequences**: Combine multiple commands into one named shortcut
+- **Tab Completion**: Press Tab to see and autocomplete your saved commands (bash/zsh)
 - **Sequential Execution**: Commands run one after another, stopping on failure (like `&&`)
 - **Interactive Management**: Easy-to-use menus for viewing, running, and managing commands
 - **Cross-Platform**: Works on macOS, Linux, and Windows
@@ -39,6 +41,23 @@ npm install -g one-line-cli
 ```
 
 That's it! Now you can use `one-line` from anywhere in your terminal.
+
+**Tab Completion** is automatically installed when you install the package! It detects your shell (zsh on macOS, bash on Linux) and sets it up automatically.
+
+If you need to manually install or reinstall completion:
+```bash
+# Auto-detect and install (recommended)
+one-line install-completion
+
+# Or manually for specific shell
+one-line completion zsh >> ~/.zshrc  # macOS (zsh)
+one-line completion bash >> ~/.bashrc  # Linux (bash)
+source ~/.zshrc  # or source ~/.bashrc
+```
+
+After installation, press `Tab` after typing `one-line ` to see all your saved commands!
+
+**Note:** macOS uses zsh by default (since macOS Catalina 10.15). The auto-installer will detect this automatically.
 
 **Or install from source:**
 
@@ -89,6 +108,74 @@ one-line delete "Build my program"
 
 # Edit a command
 one-line edit "Build my program"
+
+# Enable tab completion
+# macOS (uses zsh by default):
+one-line completion zsh >> ~/.zshrc
+source ~/.zshrc
+
+# Linux/bash:
+one-line completion bash >> ~/.bashrc
+source ~/.bashrc
+```
+
+### Examples with Different Command Types
+
+One-Line works with **any command**, not just npm! Here are examples:
+
+**C# / .NET:**
+```bash
+one-line add
+# Name: Build and Run C# Project
+# Steps:
+#   dotnet build
+#   dotnet run
+```
+
+**Python:**
+```bash
+one-line add
+# Name: Run Python Tests
+# Steps:
+#   python3 -m pytest
+#   python3 main.py
+```
+
+**Go:**
+```bash
+one-line add
+# Name: Build Go Binary
+# Steps:
+#   go build -o app
+#   ./app
+```
+
+**Rust:**
+```bash
+one-line add
+# Name: Cargo Build and Test
+# Steps:
+#   cargo build
+#   cargo test
+```
+
+**Docker:**
+```bash
+one-line add
+# Name: Docker Build and Run
+# Steps:
+#   docker build -t myapp .
+#   docker run -p 3000:3000 myapp
+```
+
+**Mixed Commands:**
+```bash
+one-line add
+# Name: Full Deployment
+# Steps:
+#   npm run build
+#   docker build -t app .
+#   kubectl apply -f k8s/
 ```
 
 ### Command Aliases
@@ -170,7 +257,22 @@ Commands are stored in `~/.one-line/commands.json` as JSON:
     {
       "id": "uuid-here",
       "name": "Build my program",
+      "alias": "build-my-program",
       "steps": ["npm run build", "npm run dev"],
+      "createdAt": "2024-01-05T12:00:00.000Z"
+    },
+    {
+      "id": "uuid-here-2",
+      "name": "Build and Run C# Project",
+      "alias": "build-and-run-c-project",
+      "steps": ["dotnet build", "dotnet run"],
+      "createdAt": "2024-01-05T12:00:00.000Z"
+    },
+    {
+      "id": "uuid-here-3",
+      "name": "Run Python Tests",
+      "alias": "run-python-tests",
+      "steps": ["python3 -m pytest", "python3 main.py"],
       "createdAt": "2024-01-05T12:00:00.000Z"
     }
   ]

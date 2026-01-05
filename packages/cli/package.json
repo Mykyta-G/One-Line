@@ -1,6 +1,6 @@
 {
   "name": "one-line-cli",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "CLI tool to combine multiple terminal commands into single named shortcuts",
   "main": "dist/index.js",
   "bin": {
@@ -9,7 +9,8 @@
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",
-    "test": "echo \"Tests not yet implemented\""
+    "test": "echo \"Tests not yet implemented\"",
+    "postinstall": "node scripts/install-completion.js"
   },
   "keywords": [
     "cli",

@@ -4,6 +4,7 @@ export interface Command {
   alias: string;
   steps: string[];
   createdAt: string;
+  usageCount?: number; // Track how many times the command has been run
 }
 
 export interface CommandsData {

@@ -58,6 +58,8 @@ export class CommandManager {
         error: `Command with id "${id}" not found`
       };
     }
+    // Increment usage count
+    this.storage.incrementUsageCount(id);
     return this.executor.executeCommand_obj(command, cwd, onStepComplete);
   }
 
@@ -79,6 +81,8 @@ export class CommandManager {
         error: `Command with name or alias "${name}" not found`
       };
     }
+    // Increment usage count
+    this.storage.incrementUsageCount(command.id);
     return this.executor.executeCommand_obj(command, cwd, onStepComplete);
   }
 
