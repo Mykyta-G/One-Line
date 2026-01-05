@@ -7,7 +7,7 @@ import {
   validateAlias,
   suggestAlternatives,
   checkCommandInPath
-} from '@one-line/core';
+} from './core';
 
 const manager = new CommandManager();
 

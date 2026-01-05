@@ -2,7 +2,21 @@
 
 **A powerful command aliasing and workflow automation tool for developers**
 
+[![npm version](https://img.shields.io/npm/v/one-line-cli.svg)](https://www.npmjs.com/package/one-line-cli)
+[![npm downloads](https://img.shields.io/npm/dm/one-line-cli.svg)](https://www.npmjs.com/package/one-line-cli)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 One-Line is a production-ready CLI tool and VS Code extension that enables developers to create, manage, and execute command sequences through an terminal based menu. Built with TypeScript and designed for cross-platform compatibility, it provides a quick and easy solution for repetitive development workflows.
+
+**🚀 Now available on npm!** Install with: `npm install -g one-line-cli`
+
+## Quick Install
+
+```bash
+npm install -g one-line-cli
+```
+
+Then run `one-line` to get started!
 
 ## Features
 
@@ -17,11 +31,17 @@ One-Line is a production-ready CLI tool and VS Code extension that enables devel
 
 ### CLI Tool
 
-```bash
-# Install globally via npm
-npm install -g one-line-cli
+**Install from npm (Recommended):**
 
-# Or install from source
+```bash
+npm install -g one-line-cli
+```
+
+That's it! Now you can use `one-line` from anywhere in your terminal.
+
+**Or install from source:**
+
+```bash
 git clone https://github.com/Mykyta-G/One-Line.git
 cd One-Line
 npm run build
@@ -31,14 +51,16 @@ npm link
 
 ### VS Code Extension
 
-1. Download the `.vsix` file from the releases page
+**Coming Soon to VS Code Marketplace!**
+
+For now, install manually:
+
+1. Download the `.vsix` file from the [releases page](https://github.com/Mykyta-G/One-Line/releases)
 2. Install via VS Code:
    - Open VS Code
    - Press `Ctrl+Shift+P` (or `Cmd+Shift+P` on Mac)
    - Type "Install from VSIX"
    - Select the downloaded file
-
-Or search for "One-Line" in the VS Code Extensions marketplace.
 
 ## Quick Start
 

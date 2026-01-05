@@ -3,7 +3,17 @@
   "displayName": "One-Line",
   "description": "Combine multiple terminal commands into single named shortcuts",
   "version": "1.0.0",
-  "publisher": "one-line",
+  "publisher": "mykytagrogul",
+  "author": "Mykyta Grogul",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Mykyta-G/One-Line.git",
+    "directory": "packages/vscode"
+  },
+  "homepage": "https://github.com/Mykyta-G/One-Line#readme",
+  "bugs": {
+    "url": "https://github.com/Mykyta-G/One-Line/issues"
+  },
   "engines": {
     "vscode": "^1.80.0"
   },

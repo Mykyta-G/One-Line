@@ -1,6 +1,6 @@
 {
   "name": "one-line-cli",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "CLI tool to combine multiple terminal commands into single named shortcuts",
   "main": "dist/index.js",
   "bin": {
@@ -18,13 +18,22 @@
     "productivity",
     "terminal"
   ],
-  "author": "",
+  "author": "Mykyta Grogul",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Mykyta-G/One-Line.git",
+    "directory": "packages/cli"
+  },
+  "homepage": "https://github.com/Mykyta-G/One-Line#readme",
+  "bugs": {
+    "url": "https://github.com/Mykyta-G/One-Line/issues"
+  },
   "dependencies": {
-    "@one-line/core": "^1.0.0",
     "chalk": "^4.1.2",
     "commander": "^11.1.0",
-    "inquirer": "^8.2.6"
+    "inquirer": "^8.2.6",
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
     "@types/inquirer": "^8.2.10"

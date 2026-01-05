@@ -1,6 +1,6 @@
 import inquirer from 'inquirer';
 import chalk from 'chalk';
-import { CommandManager, Command } from '@one-line/core';
+import { CommandManager, Command } from './core';
 
 export class InteractiveMenu {
   private manager: CommandManager;

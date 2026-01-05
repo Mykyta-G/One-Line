@@ -3,7 +3,7 @@
 import { Command } from 'commander';
 import { InteractiveMenu } from './interactive';
 import { listCommands, addCommand, runCommand, deleteCommand, editCommand } from './commands';
-import { CommandManager } from '@one-line/core';
+import { CommandManager } from './core';
 
 const program = new Command();
 
