@@ -31,8 +31,8 @@ export async function listCommands(): Promise<void> {
 
 export async function addCommand(): Promise<void> {
   console.log(chalk.bold.blue('\nAdd New Command\n'));
-  console.log(chalk.yellow('Note: Command names will be converted to shell-safe aliases.'));
-  console.log(chalk.yellow('Spaces and special characters will be replaced with hyphens.\n'));
+  console.log(chalk.gray('Note: Command names will be converted to shell-safe aliases.'));
+  console.log(chalk.gray('Spaces and special characters will be replaced with hyphens.\n'));
 
   const { name } = await inquirer.prompt([
     {
@@ -93,14 +93,14 @@ export async function addCommand(): Promise<void> {
   const steps: string[] = [];
   let addingSteps = true;
 
-  console.log(chalk.gray('\nEnter command steps (press Enter on empty line to finish):\n'));
+  console.log();
 
   while (addingSteps) {
     const { step } = await inquirer.prompt([
       {
         type: 'input',
         name: 'step',
-        message: `Step ${steps.length + 1}:`,
+        message: `Step ${steps.length + 1} ${chalk.gray('(press Enter on empty line to finish)')}:`,
         validate: (input: string) => {
           if (steps.length === 0 && !input.trim()) {
             return 'At least one command step is required';
@@ -236,8 +236,8 @@ export async function editCommand(nameOrId: string): Promise<void> {
       }
     ]);
 
-    manager.updateCommand(command.id, { name: newName });
-    console.log(chalk.bold.green(`\n[SUCCESS] Command renamed to "${newName}"\n`));
+    const updatedCommand = manager.updateCommand(command.id, { name: newName });
+    console.log(chalk.bold.green(`\n[SUCCESS] Command renamed to "${updatedCommand.name}"\n`));
   } else if (action === 'steps') {
     const steps: string[] = [];
     let addingSteps = true;
@@ -254,7 +254,7 @@ export async function editCommand(nameOrId: string): Promise<void> {
         {
           type: 'input',
           name: 'step',
-          message: `Step ${steps.length + 1}:`,
+          message: `Step ${steps.length + 1} ${chalk.gray('(press Enter on empty line to finish)')}:`,
           validate: (input: string) => {
             if (steps.length === 0 && !input.trim()) {
               return 'At least one command step is required';

@@ -11,14 +11,12 @@
     "build:workspaces": "npm run build --workspaces",
     "clean": "rm -rf packages/*/dist packages/*/node_modules node_modules",
     "package:cli": "bash scripts/package-cli.sh",
-    "package:vscode": "bash scripts/package-vscode.sh",
     "test": "npm run test --workspaces"
   },
   "keywords": [
     "cli",
     "command",
     "alias",
-    "vscode",
     "productivity"
   ],
   "author": "Mykyta Grogul",

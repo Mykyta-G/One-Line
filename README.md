@@ -71,10 +71,6 @@ cd packages/cli
 npm link
 ```
 
-### VS Code Extension
-
-**Coming Soon to VS Code Marketplace!**
-
 ## Quick Start
 
 ### CLI Usage
@@ -207,8 +203,7 @@ One-Line protects you from accidentally overwriting system commands:
 One-Line/
 ├── packages/
 │   ├── core/          # Shared library for command management
-│   ├── cli/           # Standalone CLI application
-│   └── vscode/        # VS Code extension
+│   └── cli/           # Standalone CLI application
 ├── scripts/           # Build and packaging scripts
 └── README.md
 ```
@@ -233,10 +228,6 @@ npm run build
 # Test CLI locally
 cd packages/cli
 npm link
-
-# Test VS Code extension
-cd packages/vscode
-# Press F5 in VS Code to open Extension Development Host
 ```
 
 ### Package for Distribution
@@ -244,9 +235,6 @@ cd packages/vscode
 ```bash
 # Package CLI
 npm run package:cli
-
-# Package VS Code extension
-npm run package:vscode
 ```
 
 ## Command Storage

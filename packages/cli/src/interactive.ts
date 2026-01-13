@@ -148,7 +148,7 @@ export class InteractiveMenu {
         {
           type: 'input',
           name: 'step',
-          message: `Enter command step ${steps.length + 1} (or press Enter to finish):`,
+          message: `Enter command step ${steps.length + 1} ${chalk.gray('(or press Enter to finish)')}:`,
           validate: (input: string) => {
             if (steps.length === 0 && !input.trim()) {
               return 'At least one command step is required';

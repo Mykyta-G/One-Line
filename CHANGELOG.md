@@ -5,6 +5,13 @@ All notable changes to the One-Line project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.6] - 2026-01-XX
+
+### Fixed
+- **Command name sanitization**: Command names are now automatically converted to lowercase and spaces are replaced with dashes when creating or editing commands. This ensures consistent naming across all command operations.
+
+## [1.0.5] - 2026-01-XX
+
 ## [1.0.0] - 2026-01-05
 
 ### Added

@@ -22,8 +22,7 @@ By participating in this project, you agree to maintain a professional and respe
 One-Line/
 ├── packages/
 │   ├── core/          # Shared command management library
-│   ├── cli/           # Standalone CLI application
-│   └── vscode/        # VS Code extension
+│   └── cli/           # Standalone CLI application
 ├── scripts/           # Build and packaging scripts
 └── docs/              # Documentation
 ```
@@ -37,7 +36,6 @@ npm run build
 # Build specific package
 cd packages/core && npm run build
 cd packages/cli && npm run build
-cd packages/vscode && npm run build
 ```
 
 ### Testing Your Changes
@@ -48,11 +46,6 @@ cd packages/cli
 npm link
 one-line  # Test your changes
 ```
-
-#### VS Code Extension Testing
-1. Open `packages/vscode` in VS Code
-2. Press `F5` to launch Extension Development Host
-3. Test your changes in the new VS Code window
 
 ## Coding Standards
 
@@ -151,7 +144,6 @@ Include:
 1. **Discuss First**: Open an issue to discuss major changes
 2. **Core Library**: Add shared functionality to `packages/core`
 3. **CLI**: Implement CLI-specific features in `packages/cli`
-4. **VS Code**: Implement extension features in `packages/vscode`
 5. **Documentation**: Update all relevant documentation
 
 ### Code Review Criteria

@@ -1,6 +1,6 @@
 {
   "name": "@one-line/core",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Core library for One-Line command management",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -13,7 +13,7 @@
     "cli",
     "automation"
   ],
-  "author": "",
+  "author": "Mykyta Grogul",
   "license": "MIT",
   "dependencies": {
     "uuid": "^9.0.1"

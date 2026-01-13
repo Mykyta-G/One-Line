@@ -75,13 +75,16 @@ export class CommandStorage {
   public addCommand(name: string, steps: string[], alias?: string): Command {
     const data = this.loadData();
     
+    // Sanitize the name (lowercase + spaces to dashes)
+    const sanitizedName = sanitizeCommandName(name);
+    
     // Generate alias if not provided
-    const commandAlias = alias || sanitizeCommandName(name);
+    const commandAlias = alias || sanitizedName;
     
     // Check if command with same name exists
-    const existingName = data.commands.find(cmd => cmd.name.toLowerCase() === name.toLowerCase());
+    const existingName = data.commands.find(cmd => cmd.name.toLowerCase() === sanitizedName.toLowerCase());
     if (existingName) {
-      throw new Error(`Command with name "${name}" already exists`);
+      throw new Error(`Command with name "${sanitizedName}" already exists`);
     }
 
     // Check if alias already exists
@@ -100,7 +103,7 @@ export class CommandStorage {
 
     const command: Command = {
       id: uuidv4(),
-      name,
+      name: sanitizedName,
       alias: commandAlias,
       steps,
       createdAt: new Date().toISOString()
@@ -121,12 +124,16 @@ export class CommandStorage {
 
     // Check if new name conflicts with another command
     if (updates.name) {
+      // Sanitize the name (lowercase + spaces to dashes)
+      const sanitizedName = sanitizeCommandName(updates.name);
       const nameConflict = data.commands.find(
-        cmd => cmd.id !== id && cmd.name.toLowerCase() === updates.name!.toLowerCase()
+        cmd => cmd.id !== id && cmd.name.toLowerCase() === sanitizedName.toLowerCase()
       );
       if (nameConflict) {
-        throw new Error(`Command with name "${updates.name}" already exists`);
+        throw new Error(`Command with name "${sanitizedName}" already exists`);
       }
+      // Update the name to the sanitized version
+      updates.name = sanitizedName;
     }
 
     data.commands[index] = {
